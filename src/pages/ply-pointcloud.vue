@@ -31,7 +31,8 @@ export default {
         { x: -6.7, y: 4, z: 6.7 },
         { x: 6.8, y: 4.5, z: -6.8 },
       ],
-      PLYList : ['NewOct11-Cloud.ply'], 
+      //PLYList : ['NewOct11-Cloud.ply'], 
+      PLYList : ['train.ply'], 
       positions: [
         [-7, 1.3, 9],
         [4, 2, 4],
