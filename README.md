@@ -12,4 +12,3 @@ npm install
 npm run dev
 
 访问地址：http://localhost:8080/ply-pointcloud
-
