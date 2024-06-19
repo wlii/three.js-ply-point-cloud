@@ -118,10 +118,15 @@ export default {
       let _this = this;
       this.plyLoader.load(  '../static/'+ply, function ( geometry ) {
         const material = new THREE.PointsMaterial( { 
-          color: 0x00ff00,
-          size: 0.5,
-          blending: THREE.AdditiveBlending,
-          map: _this.generateSprite()
+		// 设置原始色
+		// vertexColors: true,
+		
+		// 设置人工色
+		color: 0x00ff00,
+		size: 0.5,
+		blending: THREE.AdditiveBlending,
+		map: generateSprite()
+
         } );
         const mesh = new THREE.Points( geometry, material );//点云混合
         mesh.rotation.x = -89.55
