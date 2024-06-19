@@ -114,6 +114,18 @@ export default {
 		_this.scene.environment = texture;
 	})
    },
+setPCD: function(pcd) {
+	let _this = this;
+        const loader = new PCDLoader();
+	loader.load( '../static/'+pcd, function (points){
+		points.position.set(3,-23,45) 
+		points.rotation.set(4.7,0,0.95)
+		const material = new THREE.PointsMaterial({size: 0.01 }); // 设置点的大小为0.1
+		points.material = material;
+		points.material.vertexColors = true;
+		_this.scene.add( points );
+	});
+    },
    setPLY(ply){
       let _this = this;
       this.plyLoader.load(  '../static/'+ply, function ( geometry ) {
@@ -126,7 +138,6 @@ export default {
 		size: 0.5,
 		blending: THREE.AdditiveBlending,
 		map: generateSprite()
-
         } );
         const mesh = new THREE.Points( geometry, material );//点云混合
         mesh.rotation.x = -89.55
