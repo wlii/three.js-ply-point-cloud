@@ -108,11 +108,11 @@ export default {
     setHDR(){
      let _this = this;
      new RGBELoader().setPath( '../static/' )
-					.load( '0131.hdr', function ( texture ) {
-						texture.mapping = THREE.EquirectangularReflectionMapping;
-						_this.scene.background = texture;
-						_this.scene.environment = texture;
-				})
+	.load( '0131.hdr', function ( texture ) {
+		texture.mapping = THREE.EquirectangularReflectionMapping;
+		_this.scene.background = texture;
+		_this.scene.environment = texture;
+	})
    },
    setPLY(ply){
       let _this = this;
